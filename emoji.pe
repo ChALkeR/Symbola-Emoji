@@ -26,6 +26,7 @@ SelectMore(0u1F300, 0u1F5FF);
 SelectMore(0u1F600, 0u1F64F);
 SelectMore(0u1F680, 0u1F6FF);
 SelectMore(0u2600, 0u26FF);
+SelectMore(0u2700, 0u27BF);
 
 SelectInvert();
 Clear();
