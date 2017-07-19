@@ -1,0 +1,5 @@
+#!/usr/bin/fontforge
+
+Open($argv[1]);
+MergeFonts("dist/Symbola-Emoji.ttf");
+Generate($argv[2], "", 4);
