@@ -22,6 +22,7 @@ $ fontforge -script emoji.pe font.ttf emoji-font.ttf
 Open($argv[1]);
 SelectNone();
 
+SelectMore(0u1F100, 0u1F1FF);
 SelectMore(0u1F300, 0u1F5FF);
 SelectMore(0u1F600, 0u1F64F);
 SelectMore(0u1F680, 0u1F6FF);
