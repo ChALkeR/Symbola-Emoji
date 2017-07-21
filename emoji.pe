@@ -1,33 +1,42 @@
 #!/usr/bin/fontforge
 
 /*
-
+All the blocks included here are used for emojis
+Refs: http://unicode.org/emoji/charts/full-emoji-list.html
 Original code: https://coderwall.com/p/ruv9hq
-
-==================
-Keeps Emoji Glyphs
-==================
-
-Usage:
-
-$ chmod +x emoji.pe
-$ ./emoji.pe
-
-alternately
-
-$ fontforge -script emoji.pe font.ttf emoji-font.ttf
-
 */
 
 Open($argv[1]);
 SelectNone();
 
-SelectMore(0u1F100, 0u1F1FF);
-SelectMore(0u1F300, 0u1F5FF);
-SelectMore(0u1F600, 0u1F64F);
-SelectMore(0u1F680, 0u1F6FF);
-SelectMore(0u2600, 0u26FF);
-SelectMore(0u2700, 0u27BF);
+// Individual symbols
+SelectMore(0u00A9, 0u00A9); // Copyright sign
+SelectMore(0u00AE, 0u00AE); // Registered sign
+SelectMore(0uFE0F, 0uFE0F); // Variation selector
+
+// Blocks
+SelectMore(0u2000, 0u206F); // General Punctuation
+SelectMore(0u20D0, 0u20FF); // Combining Diacritical Marks for Symbols
+SelectMore(0u2100, 0u214F); // Letterlike Symbols
+SelectMore(0u2190, 0u21FF); // Arrows
+SelectMore(0u2300, 0u23FF); // Miscellaneous Technical
+SelectMore(0u2460, 0u24FF); // Enclosed Alphanumerics
+SelectMore(0u25A0, 0u25FF); // Geometric Shapes
+SelectMore(0u2600, 0u26FF); // Miscellaneous Symbols
+SelectMore(0u2700, 0u27BF); // Dingbats
+SelectMore(0u2900, 0u297F); // Supplemental Arrows-B
+SelectMore(0u2B00, 0u2BFF); // Miscellaneous Symbols and Arrows
+SelectMore(0u3000, 0u303F); // CJK Symbols and Punctuation
+SelectMore(0u3200, 0u32FF); // Enclosed CJK Letters and Months
+SelectMore(0u1F000, 0u1F02F); // Mahjong Tiles
+SelectMore(0u1F0A0, 0u1F0FF); // Playing Cards
+SelectMore(0u1F100, 0u1F1FF); // Enclosed Alphanumeric Supplement
+SelectMore(0u1F200, 0u1F2FF); // Enclosed Ideographic Supplement
+SelectMore(0u1F300, 0u1F5FF); // Miscellaneous Symbols and Pictographs
+SelectMore(0u1F600, 0u1F64F); // Emoticons
+SelectMore(0u1F680, 0u1F6FF); // Transport and Map Symbols
+SelectMore(0u1F900, 0u1F9FF); // Supplemental Symbols and Pictographs
+SelectMore(0uE0000, 0uE007F); // Tags
 
 SelectInvert();
 Clear();
